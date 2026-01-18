@@ -95,3 +95,12 @@ function serveOrder(item: chaiOrder|string){
     else return `the input is string`
 }
 //first make object 
+
+
+const order1:chaiOrder={
+        type:"masala chai",
+        sugar:34
+}
+
+//console.log(serverOrder(order1));
+
