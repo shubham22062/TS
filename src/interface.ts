@@ -26,3 +26,11 @@ type teaRecipe = {
     water:number;
     milk:number
 }
+
+class MasalaChai implements teaRecipe{
+    water = 100;
+    milk = 50;
+}
+
+type cupzie = "small"|"large";
+
