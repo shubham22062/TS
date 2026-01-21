@@ -34,3 +34,14 @@ class MasalaChai implements teaRecipe{
 
 type cupzie = "small"|"large";
 
+interface chaiOrder2{
+    type:string;
+    sugar:number;
+    strong:boolean;
+}
+
+
+interface cupsize2{
+    size: "small"|"medium"|"large";
+}
+
