@@ -18,3 +18,17 @@ tea ={
     isHot:true
 
 }
+
+//alisa object..
+
+type Tea = {
+    name :String,
+    price:number,
+    ingreedient:string[]
+}
+
+const adrakChai:Tea ={
+    name :"adrak chai",
+    price: 20,
+    ingreedient:["sugar","adrak"]
+}
