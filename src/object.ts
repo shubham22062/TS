@@ -32,3 +32,12 @@ const adrakChai:Tea ={
     price: 20,
     ingreedient:["sugar","adrak"]
 }
+
+
+type person={
+    name:string,
+    age:number,
+    gender:string
+}
+
+
