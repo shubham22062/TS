@@ -1,0 +1,77 @@
+"use strict";
+// Type Narrowing in TypeScript means reducing a broad (union) type into a more specific type so that TypeScript knows exactly what you’re working with at runtime.
+Object.defineProperty(exports, "__esModule", { value: true });
+// 👉 In simple words: TypeScript starts with “this could be many types” and narrows it down to one type using checks.
+function makingOfChai(order) {
+    if (order === 'string') {
+        return `your order isd ${order}`;
+    }
+    else {
+        return `your order number is ${order}`;
+    }
+}
+console.log(makingOfChai(54));
+//Truthinness
+function serveChai(msg) {
+    if (msg) {
+        return `your msg id ${msg}`;
+    }
+    else {
+        return `your chai is being serverd`;
+    }
+}
+console.log(serveChai());
+//exhautive checks
+// kind of a switch case..
+function orderChai(order) {
+    if (order === 'large')
+        return `your order is large`;
+    if (order === 'small')
+        return `your order is small`;
+    return `your order is ${order}`;
+}
+console.log(orderChai('small'));
+function printValue(value) {
+    if (typeof value === "string") {
+        console.log(value.toUpperCase());
+    }
+    else {
+        console.log(value.toFixed(2));
+    }
+}
+// talking about classes..(instance of..)
+class kulhadd {
+    serve() {
+        return `serving kulhadd chai`;
+    }
+}
+class cutting {
+    server() {
+        return `serving cutting chai`;
+    }
+}
+function serve(chai) {
+    if (chai instanceof kulhadd)
+        return chai.serve();
+}
+function isChaiOrder(obj) {
+    return (typeof obj === "object" &&
+        obj !== null &&
+        typeof obj.type === 'string' &&
+        typeof obj.sugar == 'number');
+}
+// how to use this validation function isChaiOrder
+function serveOrder(item) {
+    if (isChaiOrder(item)) {
+        return `your order is ${item.type}and with sugar ${item.sugar}spoon`;
+    }
+    else
+        return `the input is string`;
+}
+//first make object 
+const order1 = {
+    type: "masala chai",
+    sugar: 34
+};
+//console.log(serverOrder(order1));
+//# sourceMappingURL=typeNarrowing.js.map
