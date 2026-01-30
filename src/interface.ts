@@ -45,3 +45,40 @@ interface cupsize2{
     size: "small"|"medium"|"large";
 }
 
+
+interface User{
+    firstName:string;
+    lastName:string;
+    email:string;
+    age: number
+}
+
+function isLegal(us:User){
+    if(us.age>18){
+        return true
+    }else{
+        return false;
+    }
+}
+
+//implement interface as a class..
+
+interface Person{
+    name:string;
+    age:number;
+    greet(pharse:string):void;
+}
+
+class Employee implements Person{
+    name :string;
+    age:number;
+
+    constructor(n:string, a:number){
+        this.name=n;
+        this.age= a;
+    }
+
+    greet(pharse:string){
+        console.log(`${pharse}${this.name}`)
+    }
+}
