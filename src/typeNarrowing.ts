@@ -104,3 +104,55 @@ const order1:chaiOrder={
 
 //console.log(serverOrder(order1));
 
+// Reducing board type into a more specofic types using checks...
+
+// norrowing using typeof(most common)..
+
+function printValue1(value:string|number){
+    if(typeof value === "string"){
+        console.log(value.toUpperCase());
+    }else{
+        console.log(value.toFixed(2));
+    }
+}
+
+function findAge(age:string|number){
+    if (typeof age === "string"){
+        console.log("adult")
+    }else {
+        console.log(`there age is ${age}`)
+    }
+}
+
+
+// Narrowing using if check (truthy / falsy)
+
+
+function greeet(name?:string){
+    if(name){
+        console.log("hello "+name.toUpperCase())
+    }else{
+        console.log("hello gusets")
+    }
+}
+
+
+// Narrowing using in operator (Objects)
+
+type admin = {
+    role:"adminn";
+    permission:string[];
+}
+
+type user = {
+    role:user;
+}
+
+
+type person = admin|user;
+
+// function checkrole(Person:person){
+//     if("permission" in person){
+//         console.log(personalbar.permismisomn)
+//     }
+// }

@@ -19,3 +19,22 @@ searInplane='lower'
 // “This value can be this type OR that type.”
 
 // We use the pipe (|) symbol for unions.
+
+
+let score: string | number ;
+
+let id :string|number ;
+
+
+
+id = 101;
+id="a101";
+// id = true (this is wrong)\\
+
+
+function printID(id:string|number){
+    console.log(id);
+}
+
+
+let data :(string|number)[]=[1,"2",3]
