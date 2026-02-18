@@ -47,3 +47,17 @@ function pair<T, U>(a:T, b:U){
 }
 
 const resul = pair(1, "hello");
+
+
+//genrics with class..
+class Storage<T> {
+  private data: T[] = [];
+
+  add(item: T) {
+    this.data.push(item);
+  }
+
+  getAll(): T[] {
+    return this.data;
+  }
+}
